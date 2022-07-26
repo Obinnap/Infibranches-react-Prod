@@ -16,9 +16,9 @@ jobs:
       with:
         host: infibranches
         username: stanley
+        key: ${{ secrets.REACT_SECRET }} 
         port: 22
-      env:
-        credentials: ${{ secrets.REACT_SECRET }}    
+     
         script: |
           cd Dev/apps/infibranches/
           git pull origin master
