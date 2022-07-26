@@ -17,7 +17,7 @@ jobs:
       with:
         host: infibranches
         username: stanley
-        key: ${{secret.REACT_SECRET}}
+        key: ${{ secret.REACT_SECRET }}
         port: 22
         script: |
           cd Dev/apps/infibranches/
