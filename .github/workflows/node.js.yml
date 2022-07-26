@@ -18,7 +18,7 @@ jobs:
         username: stanley
         port: 22
       env:
-        credentials: ${{ secret.REACT_SECRET }}    
+        credentials: ${{ secrets.REACT_SECRET }}    
         script: |
           cd Dev/apps/infibranches/
           git pull origin master
