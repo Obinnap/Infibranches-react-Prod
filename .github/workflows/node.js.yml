@@ -13,11 +13,12 @@ jobs:
     steps:
     - name: testing infibranches server ssh connection
       uses: appleboy/ssh-action@master
-      env:
+      with:
         host: infibranches
         username: stanley
-        key: ${{ secret.REACT_SECRET }}
         port: 22
+      env:
+        credentials: ${{ secret.REACT_SECRET }}    
         script: |
           cd Dev/apps/infibranches/
           git pull origin master
