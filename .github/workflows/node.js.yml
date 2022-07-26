@@ -8,22 +8,21 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  job_one:
+    name: Deploy
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: testing infibranches server ssh connection
+      uses: appleboy/ssh-action@master
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i
-    - run: npm run build --if-present
-    - run: npm test
+        host: infibranches
+        username: stanley
+        key: ${{secret.REACT_SECRET}}
+        port: 22
+        script: |
+          cd Dev/apps/infibranches/
+          git pull origin master
+          git status
+    
+
+    
