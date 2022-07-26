@@ -14,7 +14,7 @@ jobs:
     - name: testing infibranches server ssh connection
       uses: appleboy/ssh-action@master
       with:
-        host: infibranches
+        host: infibranches.northeurope.cloudapp.azure.com
         username: stanley
         key: ${{ secrets.REACT_SECRET }} 
         port: 22
