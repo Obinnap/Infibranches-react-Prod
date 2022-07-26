@@ -1,6 +1,5 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on:
@@ -14,10 +13,10 @@ jobs:
     steps:
     - name: testing infibranches server ssh connection
       uses: appleboy/ssh-action@master
-      with:
+      env:
         host: infibranches
         username: stanley
-        key: $secret.REACT_SECRET 
+        key: ${{ secret.REACT_SECRET }}
         port: 22
         script: |
           cd Dev/apps/infibranches/
