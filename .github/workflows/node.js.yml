@@ -22,6 +22,7 @@ jobs:
         script: |
           whoami
           cd Dev/apps/infibranches/
+          git init
           git pull origin master
           git status
           
