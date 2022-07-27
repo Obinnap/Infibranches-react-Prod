@@ -16,7 +16,7 @@ jobs:
       with:
         host: infibranches.northeurope.cloudapp.azure.com
         username: stanley
-        key: ${{ secrets.REACT_SECRET }} 
+        key: ${{ secrets.INFIBRANCHES_SECRET }} 
         port: 22
      
         script: |
