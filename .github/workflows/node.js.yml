@@ -19,7 +19,11 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
      
-        script: whoami
+        script: |
+          whoami
+          cd Dev/apps/infibranches/
+          git pull origin master
+          git status
           
 
     
