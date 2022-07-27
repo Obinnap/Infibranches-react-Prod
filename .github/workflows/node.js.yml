@@ -14,15 +14,12 @@ jobs:
     - name: testing infibranches server ssh connection
       uses: appleboy/ssh-action@master
       with:
-        host: 13.69.147.76
-        username: stanley
-        key: ${{ secrets.INFIBRANCHES_SECRET }} 
-        port: 22
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
      
-        script: |
-          cd Dev/apps/infibranches/
-          git pull origin master
-          git status
-    
+        script: whoami
+          
 
     
