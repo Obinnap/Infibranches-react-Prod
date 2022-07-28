@@ -28,12 +28,10 @@ jobs:
           git add .
           git commit -a
           git status
-          
-    - name: publish package
-        script: |
           npm install
-          npm audit fix --force 
-          npm run deploy     
+          npm audit fix --force
+          npm start
+          npm run deploy
           
 
     
