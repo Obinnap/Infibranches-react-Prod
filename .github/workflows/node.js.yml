@@ -31,7 +31,8 @@ jobs:
           npm install
           npm run build
           sudo cp -r /home/stanley/Dev/apps/infibranches/build/. /var/www/html
-          npm run deploy
+          npm install -g serve
+          serve -s build
           
           
 
