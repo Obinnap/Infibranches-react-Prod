@@ -32,7 +32,7 @@ jobs:
           npm run build
           sudo cp -r /home/stanley/Dev/apps/infibranches/build/. /var/www/html
           npm install -g serve
-          serve -s build
+          sudo serve -s build
           
           
 
