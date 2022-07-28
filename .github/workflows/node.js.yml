@@ -28,7 +28,7 @@ jobs:
           git add .
           git commit -a
           git status
-          npm cache --force clean && npm install --force node-sass 
+          npm i -f
           npm run build
           
 
