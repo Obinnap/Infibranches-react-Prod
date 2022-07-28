@@ -28,11 +28,11 @@ jobs:
           git add .
           git commit -a
           git status
-          npm install
           
     - name: publish package
         run: |
-          yarn
+          npm install
+          npm audit fix --force 
           npm run deploy     
           
 
