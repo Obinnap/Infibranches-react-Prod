@@ -29,9 +29,11 @@ jobs:
           git commit -a
           git status
           npm install
-          npm audit fix --force
-          npm start
-          npm run build
+          
+    - name: publish package
+        run: |
+          yarn
+          npm run deploy     
           
 
     
