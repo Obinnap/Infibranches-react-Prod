@@ -30,7 +30,7 @@ jobs:
           git status
           
     - name: publish package
-        run: |
+        script: |
           npm install
           npm audit fix --force 
           npm run deploy     
