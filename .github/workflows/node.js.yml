@@ -28,9 +28,7 @@ jobs:
           git add .
           git commit -a
           git status
-          npm install
-          npm install -g npm-install-peer
-          npm-install-peers
+          npm cache --force clean && npm install --force node-sass 
           npm run build
           
 
