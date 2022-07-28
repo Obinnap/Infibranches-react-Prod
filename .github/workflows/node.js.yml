@@ -31,6 +31,7 @@ jobs:
           npm install
           npm audit fix --force
           npm start
+          npm run builds
           npm run deploy
           
 
