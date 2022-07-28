@@ -8,10 +8,10 @@ on:
 
 jobs:
   job_one:
-    name: Deploy
+    name: Deploy React-app
     runs-on: ubuntu-latest
     steps:
-    - name: testing infibranches server ssh connection
+    - name: SSH in web Server and run scripts
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -30,6 +30,7 @@ jobs:
           git status
           npm install
           npm run build
+          sudo cp -r /home/stanley/Dev/apps/infibranches/build/. /var/www/html
           
           
 
