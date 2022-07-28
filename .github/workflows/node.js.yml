@@ -29,6 +29,8 @@ jobs:
           git commit -a
           git status
           npm install
+          npm install -g npm-install-peer
+          npm-install-peers
           npm run build
           
 
