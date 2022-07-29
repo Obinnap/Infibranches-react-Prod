@@ -23,10 +23,10 @@ jobs:
           mkdir Infibranches
           cd Infibranches
           git init
+          git config user.name "obinna"
+          git config user.email "obinna@infibranches.com"
           git clone https://github.com/Obinnap/Infibranches-react-app.git
           git pull origin master
-          git add .
-          git commit -a
           git status
           
        
