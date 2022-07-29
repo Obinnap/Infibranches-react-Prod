@@ -25,7 +25,7 @@ jobs:
           git init
           git config user.name "obinna"
           git config user.email "obinna@infibranches.com"
-          git clone https://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@github.com/Obinnap/Infibranches-react-app.git
+          git clone https://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@github.com/Obinnap/Infibranches-react-app.git
           git pull origin master
           git status
           
