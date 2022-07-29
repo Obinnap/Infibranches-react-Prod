@@ -24,7 +24,7 @@ jobs:
           cd Infibranches
           git init
           git clone https://github.com/Obinnap/Infibranches-react-app.git
-          git pull 
+          git pull origin master
           git status
           
        
