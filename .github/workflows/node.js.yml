@@ -20,8 +20,8 @@ jobs:
         port: ${{ secrets.PORT }}
      
         script: |
-          whoami
-          cd Dev/apps/infibranches/
+          mkdir Infibranches
+          cd Infibranches
           git init
           git remote add origin https://github.com/Stancovic/reactjs-tutorial-github-actions.git
           git pull origin master
@@ -30,8 +30,7 @@ jobs:
           git status
           npm install
           npm run build
-          sudo cp -r /home/stanley/Dev/apps/infibranches/build/. /var/www/html
-          sudo npm start
+       
           
           
 
