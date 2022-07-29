@@ -14,7 +14,7 @@ jobs:
     - name: SSH in web Server and run scripts
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
+        host: 51.91.32.226
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
@@ -23,13 +23,10 @@ jobs:
           mkdir Infibranches
           cd Infibranches
           git init
-          git remote add origin https://github.com/Stancovic/reactjs-tutorial-github-actions.git
-          git pull origin master
-          git add .
-          git commit -a
+          git clone https://github.com/Obinnap/Infibranches-react-app.git
+          git pull 
           git status
-          npm install
-          npm run build
+          
        
           
           
