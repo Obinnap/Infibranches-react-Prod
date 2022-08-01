@@ -25,7 +25,6 @@ jobs:
           git init
           git remote add origin https://github.com/Obinnap/Infibranches-react-app.git
           git pull origin master
-          git status
           
        
           
