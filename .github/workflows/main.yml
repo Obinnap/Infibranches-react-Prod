@@ -1,0 +1,25 @@
+name: Replicate Code
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  replicate-code:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Copy Code to Repo 2
+      run: |
+        cp -r ./* ../Infibranches-reactapp-UAT/
+        cd ../Infibranches-reactapp-UAT/
+        git add .
+        git commit -m "Replicate code from source repo"
+        git push
+    - name: Copy Code to Repo 3
+      run: |
+        cp -r ./* ../Infibranches-react-Prod/
+        cd ../Infibranches-react-Prod/
+        git add .
+        git commit -m "Replicate code from source repo"
+        git push
