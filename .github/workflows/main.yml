@@ -16,10 +16,4 @@ jobs:
         git add .
         git commit -m "Replicate code from source repo"
         git push
-    - name: Copy Code to Repo 3
-      run: |
-        cp -r ./* ../Infibranches-react-Prod/
-        cd ../Infibranches-react-Prod/
-        git add .
-        git commit -m "Replicate code from source repo"
-        git push
+    
