@@ -16,5 +16,12 @@ jobs:
         git add .
         git commit -m "Replicate code from source repo"
         git push
-    
+    - uses: actions/checkout@v2
+    - name: Copy Code to Repo 2
+      run: |
+        cp -r ./* ../Infibranches-reactapp-UAT/
+        cd ../Infibranches-reactapp-UAT/
+        git add .
+        git commit -m "Replicate code from source repo"
+        git push
     
