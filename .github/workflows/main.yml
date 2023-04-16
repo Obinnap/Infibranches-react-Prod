@@ -23,5 +23,5 @@ jobs:
         cd ../Infibranches-reactapp-UAT/
         git add .
         git commit -m "Replicate code from source repo to all environment"
-        git push
+        
     
